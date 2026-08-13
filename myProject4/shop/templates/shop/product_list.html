@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}shop Posts{% endblock %}
+{% block heading %}welcome to my Django Project {% endblock %}
+{% block content %}
+<h1>shop products</h1>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.title }}</li>
+        {% empty %}
+            <li>No posts available.</li>
+        {% endfor %}
+    </ul>
+<p> shop product listening page :</p>
+{% endblock %}

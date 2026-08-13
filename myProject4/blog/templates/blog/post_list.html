@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Blog Posts{% endblock %}
+{% block heading %}Welcome to my Django Project {% endblock %}
+{% block content %}
+<h1>Blog Posts</h1>
+    <ul>
+        {% for post in posts %}
+            <li>{{ post.title }}</li>
+        {% empty %}
+            <li>No posts available.</li>
+        {% endfor %}
+    </ul>
+<p> Here are the latest blog posts:</p>
+{% endblock %}
