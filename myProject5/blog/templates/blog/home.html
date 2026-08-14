@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#Template Basic</title>
+</head>
+<body>
+    <h1>Template Basic</h1>
+    <!-- This is a comment in HTML -->
+    {% comment %} this is 2nd line comment {% endcomment %}
+    {# 3rd line comment #} 
+    <p>This is a simple template to demonstrate Django template functionality.</p>
+    <p>Welcome to the blog home page!</p>
+
+    {% comment %} single variable {% endcomment %}
+    <p>Name: {{ name }}</p>
+    <p>Age: {{ age }}</p>
+    {% comment %} List Access {% endcomment %}
+    <p>Skill: {{ skills}}</p>
+    <p>Skill: {{ skills.0}}</p>
+    {% comment %} Obj Attribute Access {% endcomment %}
+    <p>User Name: {{ user.name }}</p>
+    <p>User Age: {{ user.age }}</p>
+    {% comment %} Dict {% endcomment %}
+    <h2>Blog Information</h2>
+    <p>Title: {{ blog.title }}</p>
+    <p>Author: {{ blog.created_at }}</p>
+    <p>Content:{{ blog.content }}</p>
+    <p>Content:{{ blog.content|safe }}</p>
+    <p>Author Name:{{ blog.author.name}}</p>
+    <p>Author Email:{{ blog.author.email}}</p>
+    {% comment %} Default Value {% endcomment %}
+    <p>Default Empty Value: {{ empty_value|default:"No Content" }}</p>
+    <p>Default Empty Value: {{ empty_value|default_if_none:"No Data" }}</p>
+
+</body>
+</html>
